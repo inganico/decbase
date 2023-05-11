@@ -1,10 +1,10 @@
 $maxWidth: 1920; // максимальная ширина страницы
 $minWidth: 320; // минимальная ширина телефона
 $maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
-$containerWidth: 1160; // ширина контейнера из макета
+$containerWidth: 1346; // ширина контейнера из макета
 
 $mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ''; // !указать здесь основное семейство шрифта
+$mainFont: 'OpenSans'; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
 $headerHeight: 100;
@@ -14,8 +14,11 @@ $mainRadius: rem(10);
 
 $whiteColor: #fff;
 $blackColor: #131313;
-$grayColor: #6f6f6f;
+$grayColor: rgba(100, 100, 100, 1);
+$greenColor: #37806b;
+$brownColor: #b0855b;
 $redColor: #ff4040;
+$btnHeader: #caa892;
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
@@ -27,13 +30,10 @@ $fontWeight: $mainWeight; // Жирность шрифта по умолчани
 
 $standartTrans: all 280ms ease-in-out 0ms;
 
-$btnBoxShadow:  0px 2px 3px rgba(#000, 10%), 
-                0px 8px 3px rgba(#000, 10%);
+$btnBoxShadow: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
 
-$lightBoxShadow:  0 0 2px 0 rgba(#000, 10%), 
-                  0 0 4px 0 rgba(#000, 10%), 
-                  0 0 8px 0 rgba(#000, 10%);
+$lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%),
+  0 0 8px 0 rgba(#000, 10%);
 
-$hoverBoxShadow:  0 0 5px 0 rgba(#000, 10%), 
-                  0 0 10px 0 rgba(#000, 10%), 
-                  0 0 15px 0 rgba(#000, 10%);
+$hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
+  0 0 15px 0 rgba(#000, 10%);

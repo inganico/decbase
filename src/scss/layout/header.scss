@@ -1,6 +1,7 @@
 // =====================================================================================================================
 .header {
   width: 100%;
+  padding-bottom: rem(47);
   &.sticky {
     // ..стили для липкого хедера
   }
@@ -9,8 +10,40 @@
     height: rem($headerHeight);
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
+
+.menu {
+  display: flex;
+  align-items: center;
+  column-gap: 64px;
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @include notLast() {
+      margin-right: 43px;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    &_active {
+      color: #646464;
+    }
+  }
+
+  &__btn {
+    background-color: $btnHeader;
+    color: $whiteColor;
+    padding: rem(5) rem(19);
+    border-top-left-radius: rem(15);
+    border-bottom-right-radius: rem(15);
+  }
+}
+
 // =====================================================================================================================
 
 // Burger
