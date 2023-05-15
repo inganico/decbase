@@ -1,7 +1,8 @@
 .service {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
   &__container {
+    position: relative;
   }
 
   &__text {
@@ -23,6 +24,70 @@
     line-height: 40px;
     margin-bottom: 70px;
   }
+
+  &__arrow {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    right: 20px;
+    top: 70px;
+
+    &_left,
+    &_right {
+      position: absolute;
+      display: block;
+      background: #ffffff;
+      box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      top: 0;
+      right: 0;
+      transition: all 0.3s;
+    }
+
+    &_right {
+      right: 50px;
+    }
+
+    &_left:hover,
+    &_right:hover {
+      background-color: $greenColor;
+      transition: background-color 0.3s linear;
+    }
+
+    &_right::before,
+    &_left::before {
+      position: absolute;
+      content: '';
+      display: block;
+      border-top: 2px solid #000000;
+      border-right: 2px solid #000000;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      transform: translate(-50%, -50%) rotate(220deg);
+    }
+
+    &_left::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &_left:hover::before,
+    &_left:hover::after {
+      border-top: 2px solid $whiteColor;
+      border-right: 2px solid $whiteColor;
+      transition: background-color 0.3s linear;
+    }
+
+    &_right:hover::before,
+    &_right:hover::after {
+      border-top: 2px solid $whiteColor;
+      border-right: 2px solid $whiteColor;
+      transition: background-color 0.3s linear;
+    }
+  }
 }
 
 .card {
@@ -36,11 +101,48 @@
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
     border-radius: 60px 0px;
     min-height: 193px;
+    position: relative;
+
+    &_active {
+      background-color: $brownColor;
+    }
   }
 
   &__wrap {
-    padding: 10px 22px 10px 90px;
+    padding: 20px 22px 10px 90px;
     margin-left: auto;
+
+    &_active h3 {
+      color: $whiteColor;
+    }
+    &_active p {
+      color: $whiteColor;
+    }
+  }
+
+  &__wrap::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 20px;
+    left: 30px;
+  }
+
+  &__wrap_img-1::before {
+    background-image: url('../../images/cart/interior.svg');
+  }
+
+  &__wrap_img-2::before {
+    background-image: url('../../images/cart/architecture.svg');
+  }
+
+  &__wrap_img-3::before {
+    background-image: url('../../images/cart/planning.svg');
   }
 
   &__title {
