@@ -39,13 +39,9 @@
   &__btn {
     font-weight: 700;
     font-size: rem(18);
-    line-height: rem(30);
     text-transform: uppercase;
     padding: rem(5) rem(28);
     background-color: $greenColor;
-    color: $whiteColor;
-    border-top-left-radius: rem(20);
-    border-bottom-right-radius: rem(20);
   }
 
   &__img {
